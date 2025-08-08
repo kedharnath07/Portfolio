@@ -1,0 +1,218 @@
+[
+  {
+    "title": "Team Sync",
+    "date": "2025-01-21",
+    "time": "10:00",
+    "duration": "1h"
+  },
+  {
+    "title": "One-on-One",
+    "date": "2025-01-27",
+    "time": "09:30",
+    "duration": "0.5h"
+  },
+  {
+    "title": "Demo Day",
+    "date": "2025-01-10",
+    "time": "16:00",
+    "duration": "1h"
+  },
+  {
+    "title": "Team Sync",
+    "date": "2025-02-16",
+    "time": "10:00",
+    "duration": "1h"
+  },
+  {
+    "title": "Retrospective",
+    "date": "2025-02-25",
+    "time": "13:00",
+    "duration": "1h"
+  },
+  {
+    "title": "One-on-One",
+    "date": "2025-02-20",
+    "time": "09:30",
+    "duration": "0.5h"
+  },
+  {
+    "title": "Retrospective",
+    "date": "2025-03-15",
+    "time": "13:00",
+    "duration": "1h"
+  },
+  {
+    "title": "Design Review",
+    "date": "2025-03-24",
+    "time": "11:30",
+    "duration": "1.5h"
+  },
+  {
+    "title": "Retrospective",
+    "date": "2025-03-05",
+    "time": "13:00",
+    "duration": "1h"
+  },
+  {
+    "title": "Client Call",
+    "date": "2025-04-26",
+    "time": "14:00",
+    "duration": "1h"
+  },
+  {
+    "title": "One-on-One",
+    "date": "2025-04-20",
+    "time": "09:30",
+    "duration": "0.5h"
+  },
+  {
+    "title": "One-on-One",
+    "date": "2025-04-16",
+    "time": "09:30",
+    "duration": "0.5h"
+  },
+  {
+    "title": "Client Call",
+    "date": "2025-05-01",
+    "time": "14:00",
+    "duration": "1h"
+  },
+  {
+    "title": "One-on-One",
+    "date": "2025-05-25",
+    "time": "09:30",
+    "duration": "0.5h"
+  },
+  {
+    "title": "Design Review",
+    "date": "2025-05-16",
+    "time": "11:30",
+    "duration": "1.5h"
+  },
+  {
+    "title": "Retrospective",
+    "date": "2025-06-10",
+    "time": "13:00",
+    "duration": "1h"
+  },
+  {
+    "title": "Sprint Planning",
+    "date": "2025-06-04",
+    "time": "15:00",
+    "duration": "2h"
+  },
+  {
+    "title": "Client Call",
+    "date": "2025-06-07",
+    "time": "14:00",
+    "duration": "1h"
+  },
+  {
+    "title": "Team Sync",
+    "date": "2025-07-02",
+    "time": "10:00",
+    "duration": "1h"
+  },
+  {
+    "title": "Demo Day",
+    "date": "2025-07-13",
+    "time": "16:00",
+    "duration": "1h"
+  },
+  {
+    "title": "Design Review",
+    "date": "2025-07-17",
+    "time": "11:30",
+    "duration": "1.5h"
+  },
+  {
+    "title": "Demo Day",
+    "date": "2025-08-20",
+    "time": "16:00",
+    "duration": "1h"
+  },
+  {
+    "title": "Demo Day",
+    "date": "2025-08-15",
+    "time": "16:00",
+    "duration": "1h"
+  },
+  {
+    "title": "Team Sync",
+    "date": "2025-08-27",
+    "time": "10:00",
+    "duration": "1h"
+  },
+  {
+    "title": "One-on-One",
+    "date": "2025-09-28",
+    "time": "09:30",
+    "duration": "0.5h"
+  },
+  {
+    "title": "One-on-One",
+    "date": "2025-09-03",
+    "time": "09:30",
+    "duration": "0.5h"
+  },
+  {
+    "title": "Client Call",
+    "date": "2025-09-01",
+    "time": "14:00",
+    "duration": "1h"
+  },
+  {
+    "title": "One-on-One",
+    "date": "2025-10-04",
+    "time": "09:30",
+    "duration": "0.5h"
+  },
+  {
+    "title": "Design Review",
+    "date": "2025-10-16",
+    "time": "11:30",
+    "duration": "1.5h"
+  },
+  {
+    "title": "Retrospective",
+    "date": "2025-10-23",
+    "time": "13:00",
+    "duration": "1h"
+  },
+  {
+    "title": "Retrospective",
+    "date": "2025-11-14",
+    "time": "13:00",
+    "duration": "1h"
+  },
+  {
+    "title": "One-on-One",
+    "date": "2025-11-05",
+    "time": "09:30",
+    "duration": "0.5h"
+  },
+  {
+    "title": "Retrospective",
+    "date": "2025-11-20",
+    "time": "13:00",
+    "duration": "1h"
+  },
+  {
+    "title": "Client Call",
+    "date": "2025-12-25",
+    "time": "14:00",
+    "duration": "1h"
+  },
+  {
+    "title": "Demo Day",
+    "date": "2025-12-11",
+    "time": "16:00",
+    "duration": "1h"
+  },
+  {
+    "title": "Team Sync",
+    "date": "2025-12-04",
+    "time": "10:00",
+    "duration": "1h"
+  }
+]
