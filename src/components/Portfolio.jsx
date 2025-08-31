@@ -48,7 +48,7 @@ export default function Portfolio() {
                 title: "GitHub Finder",
                 desc: "Fetches user data from GitHub API and displays profile details.",
                 skills: ["React", "API", "CSS"],
-                url:"https://netfix-clone-omega-red.vercel.app/"
+                url:"https://github.com/kedharnath07/git-hub-profile-finder/tree/main/GitHub_Profile_Finder-main"
               },
               {
                 title: "ToDOList",
