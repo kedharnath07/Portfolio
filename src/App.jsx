@@ -1,35 +1,14 @@
 import { useEffect, useState } from 'react';
 import dayjs from 'dayjs';
-import { getMonthMatrix } from './Utils/dateUtils';
-import CalendarHeader from './components/CalenderHeader';
-import Calendar from './components/Calender';
+
+import Portfolio from './components/Portfolio';
 
 function App() {
-  const [currentDate, setCurrentDate] = useState(dayjs());
-  const [events, setEvents] = useState([]);
-
-  useEffect(() => {
-    fetch('/events.json')
-      .then(res => res.json())
-      .then(setEvents);
-  }, []);
-
-  const handlePrev = () => {
-    setCurrentDate(currentDate.subtract(1, 'month'));
-  };
-
-  const handleNext = () => {
-    setCurrentDate(currentDate.add(1, 'month'));
-  };
-
-  const matrix = getMonthMatrix(currentDate.month() + 1, currentDate.year());
-  const today = dayjs();
-
+  //fetch('http://localhost:4040/').then(res=>res.json()).then(data=>console.log(data)).catch(err=>console.log(err))
   return (
     <div className="max-w-4xl mx-auto p-4">
-      <CalendarHeader currentDate={currentDate} onPrev={handlePrev} onNext={handleNext} />
-      <Calendar matrix={matrix} events={events} today={today} />
-      
+     <Portfolio/>
+     
     </div>
   );
 }
