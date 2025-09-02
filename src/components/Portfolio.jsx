@@ -1,127 +1,190 @@
-
-import React from 'react';
+import React, { useState } from "react";
 
 export default function Portfolio() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <div className="bg-gray-50 dark:bg-gray-900 min-h-screen font-sans text-gray-800 dark:text-gray-200">
-      
       <header className="max-w-6xl mx-auto flex justify-between items-center py-6 px-4 sm:px-6 lg:px-8 border-b border-gray-300 dark:border-gray-700">
-        <h1 className="text-3xl font-extrabold tracking-tight">Heerematam Kedharnath</h1>
-        <nav className="space-x-6 text-lg font-medium">
-          <a href="#projects" className="hover:text-indigo-600 transition">Projects</a>
-          <a href="#education" className="hover:text-indigo-600 transition">Education</a>
-          <a href="#contact" className="hover:text-indigo-600 transition">Contact</a>
+        <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
+          Heerematam Kedharnath
+        </h1>
+        <nav className="hidden md:flex space-x-6 text-lg font-medium">
+          <a href="#projects" className="hover:text-indigo-600 transition">
+            Projects
+          </a>
+          <a href="#education" className="hover:text-indigo-600 transition">
+            Education
+          </a>
+          <a href="#contact" className="hover:text-indigo-600 transition">
+            Contact
+          </a>
         </nav>
+        <button
+          onClick={() => setMenuOpen(!menuOpen)}
+          className="md:hidden text-2xl focus:outline-none"
+        >
+          ☰
+        </button>
       </header>
 
-      <main className="max-w-6xl mx-auto px-6 sm:px-8 py-16">
-        
-        <section id="hero" className="text-center mb-20">
-          <h2 className="text-5xl font-bold mb-4">
+      {menuOpen && (
+        <div className="md:hidden bg-gray-100 dark:bg-gray-800 px-6 py-4 space-y-3 text-center">
+          <a
+            href="#projects"
+            className="block hover:text-indigo-600 transition"
+            onClick={() => setMenuOpen(false)}
+          >
+            Projects
+          </a>
+          <a
+            href="#education"
+            className="block hover:text-indigo-600 transition"
+            onClick={() => setMenuOpen(false)}
+          >
+            Education
+          </a>
+          <a
+            href="#contact"
+            className="block hover:text-indigo-600 transition"
+            onClick={() => setMenuOpen(false)}
+          >
+            Contact
+          </a>
+        </div>
+      )}
+
+      <main className="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
+        <section id="hero" className="text-center mb-16 sm:mb-20">
+          <h2 className="text-3xl sm:text-5xl font-bold mb-4">
             Hello, I'm <span className="text-indigo-600">Kedharnath</span>
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Full Stack & Frontend Developer building modern, responsive, and engaging web applications.
+          <p className="text-base sm:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+            Full Stack & Frontend Developer building modern, responsive, and
+            engaging web applications.
           </p>
         </section>
 
-        
-        <section id="projects" className="mb-20">
-          <h3 className="text-3xl font-semibold mb-10 border-b-2 border-indigo-600 inline-block pb-2">
+        <section id="projects" className="mb-16 sm:mb-20">
+          <h3 className="text-2xl sm:text-3xl font-semibold mb-8 sm:mb-10 border-b-2 border-indigo-600 inline-block pb-2">
             Projects
           </h3>
-          <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-8 sm:gap-10 sm:grid-cols-2 lg:grid-cols-3">
             {[
               {
                 title: "Netflix Clone",
                 desc: "Responsive UI clone of Netflix built using HTML, CSS, and JavaScript.",
                 skills: ["HTML", "CSS", "JavaScript"],
-                url:"https://netfix-clone-omega-red.vercel.app/"
+                url: "https://netfix-clone-omega-red.vercel.app/",
               },
               {
                 title: "FlashDrop",
-                desc: "“Flash Drop is a React-based e-commerce web app (like eKart) featuring product listings, filters, and a simple cart system",
-                skills: ["HTML", "Bootsrtap", "JavaScript","ReactJs"],
-                url:"https://flash-drop.vercel.app/"
+                desc: "A React-based e-commerce app with product listings, filters, and a cart system.",
+                skills: ["HTML", "Bootstrap", "JavaScript", "ReactJs"],
+                url: "https://flash-drop.vercel.app/",
               },
               {
                 title: "GitHub Finder",
                 desc: "Fetches user data from GitHub API and displays profile details.",
                 skills: ["React", "API", "CSS"],
-                url:"https://github.com/kedharnath07/git-hub-profile-finder/tree/main/GitHub_Profile_Finder-main"
+                url: "https://github.com/kedharnath07/git-hub-profile-finder/tree/main/GitHub_Profile_Finder-main",
               },
               {
                 title: "ToDOList",
-                desc: "A React-based To-Do List web app for adding, completing, and managing daily tasks with a simple and responsive UI.",
+                desc: "A React-based To-Do List web app for adding, completing, and managing tasks.",
                 skills: ["React", "JavaScript", "Bootstrap"],
-                url:"https://to-do-list-eight-blush-60.vercel.app/"
+                url: "https://to-do-list-eight-blush-60.vercel.app/",
               },
               {
                 title: "EatAndSplit",
-                desc: "A React app to manage friends’ shared expenses, where you can add/remove friends, split bills, track balances, and persist data in local storage.",
+                desc: "A React app to manage friends’ shared expenses with split bills and local storage.",
                 skills: ["React", "JavaScript", "TailwindCSS"],
-                url:"https://eat-and-split-46pu.vercel.app/"
-              }
+                url: "https://eat-and-split-46pu.vercel.app/",
+              },
             ].map((proj, i) => (
-              <div key={i} className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-                <h4 className="text-2xl font-semibold mb-2">{proj.title}</h4>
-                <p className="mb-4 text-gray-700 dark:text-gray-300">{proj.desc}</p>
+              <div
+                key={i}
+                className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"
+              >
+                <h4 className="text-xl sm:text-2xl font-semibold mb-2">
+                  {proj.title}
+                </h4>
+                <p className="mb-4 text-gray-700 dark:text-gray-300">
+                  {proj.desc}
+                </p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {proj.skills.map((skill, idx) => (
-                    <span key={idx} className="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">
+                    <span
+                      key={idx}
+                      className="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium"
+                    >
                       {skill}
                     </span>
                   ))}
                 </div>
-                <a href={proj.url} className="text-indigo-600 hover:underline font-semibold" target='blank'>
+                <a
+                  href={proj.url}
+                  className="text-indigo-600 hover:underline font-semibold"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   View Project
                 </a>
               </div>
             ))}
           </div>
-        </section>       
-        <section id="education" className="mb-20">
-          <h3 className="text-3xl font-semibold mb-10 border-b-2 border-indigo-600 inline-block pb-2">
+        </section>
+
+        <section id="education" className="mb-16 sm:mb-20">
+          <h3 className="text-2xl sm:text-3xl font-semibold mb-8 sm:mb-10 border-b-2 border-indigo-600 inline-block pb-2">
             Education
           </h3>
-          <div className="grid gap-8 md:grid-cols-3">
+          <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
             {[
               {
-                title: "Bachelor's Degree in Computer Science And Engineering",
-                desc: "G Pullaiah College of Engineering and Technology (2021 - 2025) – 78%"
+                title:
+                  "Bachelor's Degree in Computer Science And Engineering",
+                desc: "G Pullaiah College of Engineering and Technology (2021 - 2025) – 78%",
               },
               {
                 title: "Intermediate (M.P.C)",
-                desc: "Deeksha Junior College (2019 - 2021) – 80%"
+                desc: "Deeksha Junior College (2019 - 2021) – 80%",
               },
               {
                 title: "Schooling",
-                desc: "Zilla Parishad High School (2018 - 2019) – 83%"
-              }
+                desc: "Zilla Parishad High School (2018 - 2019) – 83%",
+              },
             ].map((edu, i) => (
-              <div key={i} className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-                <h4 className="text-2xl font-semibold mb-2">{edu.title}</h4>
+              <div
+                key={i}
+                className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"
+              >
+                <h4 className="text-xl sm:text-2xl font-semibold mb-2">
+                  {edu.title}
+                </h4>
                 <p className="text-gray-700 dark:text-gray-300">{edu.desc}</p>
               </div>
             ))}
           </div>
         </section>
 
-        
-        <section id="about" className="mb-20 max-w-3xl mx-auto text-center">
-          <h3 className="text-3xl font-semibold mb-6 border-b-2 border-indigo-600 inline-block pb-2">
+        <section id="about" className="mb-16 sm:mb-20 max-w-3xl mx-auto text-center">
+          <h3 className="text-2xl sm:text-3xl font-semibold mb-6 border-b-2 border-indigo-600 inline-block pb-2">
             About Me
           </h3>
-          <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-            I am a passionate developer with expertise in HTML, CSS, JavaScript,Bootstrap, React,NodeJs,ExpressJs and TailwindCSS.
-            I love building clean, responsive, and user-friendly applications, with a focus on both
-            frontend and backend development.
+          <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+            I am a passionate developer with expertise in HTML, CSS, JavaScript,
+            Bootstrap, React, NodeJs, ExpressJs and TailwindCSS. I love building
+            clean, responsive, and user-friendly applications, with a focus on
+            both frontend and backend development.
           </p>
         </section>
 
-        
-        <section id="contact" className="max-w-md mx-auto p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
-          <h3 className="text-3xl font-semibold mb-6 border-b-2 border-indigo-600 inline-block pb-2 text-center">
+        <section
+          id="contact"
+          className="max-w-md mx-auto p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg"
+        >
+          <h3 className="text-2xl sm:text-3xl font-semibold mb-6 border-b-2 border-indigo-600 inline-block pb-2 text-center">
             Contact Me
           </h3>
           <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
@@ -169,10 +232,30 @@ export default function Portfolio() {
             </button>
           </form>
         </section>
+
+        <div className="text-center mt-8 flex justify-center space-x-6">
+          <a
+            href="https://github.com/kedharnath07"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            className="text-gray-600 dark:text-gray-300 hover:text-indigo-600 transition transform hover:scale-110"
+          >
+            <i className="bi bi-github text-3xl"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/kedharnath-heerematam/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            className="text-gray-600 dark:text-gray-300 hover:text-indigo-600 transition transform hover:scale-110"
+          >
+            <i className="bi bi-linkedin text-3xl"></i>
+          </a>
+        </div>
       </main>
 
-      
-      <footer className="text-center py-8 text-gray-500 dark:text-gray-400 border-t border-gray-300 dark:border-gray-700">
+      <footer className="text-center py-6 sm:py-8 text-gray-500 dark:text-gray-400 border-t border-gray-300 dark:border-gray-700">
         &copy; 2025 Heerematam Kedharnath. All rights reserved.
       </footer>
     </div>
